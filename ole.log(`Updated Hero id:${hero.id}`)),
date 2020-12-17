@@ -1,0 +1,23 @@
+[1mdiff --git a/src/app/app-routing.module.ts b/src/app/app-routing.module.ts[m
+[1mindex d425c6f..ed55bbf 100644[m
+[1m--- a/src/app/app-routing.module.ts[m
+[1m+++ b/src/app/app-routing.module.ts[m
+[36m@@ -1,7 +1,17 @@[m
+ import { NgModule } from '@angular/core';[m
+ import { Routes, RouterModule } from '@angular/router';[m
+[32m+[m[32mimport { DashboardComponent } from './dashboard/dashboard.component';[m
+[32m+[m[32mimport { HeroesComponent } from './heroes/heroes.component';[m
+[32m+[m[32mimport { PageNotFoundComponent } from './page-not-found/page-not-found.component';[m
+[32m+[m[32mimport { HeroDetailComponent } from './hero-detail/hero-detail.component';[m
+ [m
+[31m-const routes: Routes = [];[m
+[32m+[m[32mconst routes: Routes = [[m
+[32m+[m[32m  { path: 'dashboard', component: DashboardComponent},[m
+[32m+[m[32m  { path: 'heroes', component: HeroesComponent},[m
+[32m+[m[32m  { path: 'detail/:id', component: HeroDetailComponent},[m
+[32m+[m[32m  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},[m
+[32m+[m[32m  { path: '**', component: PageNotFoundComponent},[m
+[32m+[m[32m];[m
+ [m
+ @NgModule({[m
+   imports: [RouterModule.forRoot(routes)],[m

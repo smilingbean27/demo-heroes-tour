@@ -1,0 +1,21 @@
+.hero_list{
+    list-style: none;
+}
+
+.hero_item{
+    background-color: #555;
+    padding: .5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero_item:not(:last-child){
+    margin-bottom: .5rem;
+}
+
+.hero_link{
+    text-decoration: none;
+    color: #eee;
+    display: inline-block;
+    width: 100%; 
+}

@@ -1,0 +1,22 @@
+.card {
+    width: 50%;
+    margin: 1.5rem auto;
+    background-color: #555;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.card_detail{
+    color: #fff;
+}
+
+.card_input{
+    margin-left: .5rem;
+    padding: 0 .5rem;
+}
+
+.goback{
+    position:absolute;
+    left: 32%;
+}

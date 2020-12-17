@@ -1,0 +1,11 @@
+<ul class="hero_list">
+    <li class="hero_item" *ngFor="let hero of heroes">
+        <a class="hero_link" routerLink="/detail/{{hero.id}}" routerLinkActive="active">
+            {{hero.name}}
+        </a>
+    </li>
+    <label> <input type="text" placeholder="Add new Hero" #newHero required></label>
+    <label> <input type="number" placeholder="Mention rank" #newHeroRank required></label>
+    <button (click)="add(newHero.value, newHeroRank.value)"> Add</button>
+</ul>
+

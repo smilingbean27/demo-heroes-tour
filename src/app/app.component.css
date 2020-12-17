@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+}
+.container{
+    width: 70%;
+    min-height: 80vh;
+    background-color: #ddd;
+    margin: 1rem auto;
+    padding: 2rem 1.5rem;
+}
+
+.navigation_list{
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0;
+}
+
+.navigation_item{
+    background-color: #999;
+    padding: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.navigation_link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.router{
+    padding: 1rem .8rem;
+
+}

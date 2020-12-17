@@ -1,0 +1,21 @@
+.dashboard_list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard_item{
+    flex-basis: 30%;
+    background-color: rgb(243, 13, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.dashboard_link{
+    color: #fff;
+    text-decoration: none;
+}

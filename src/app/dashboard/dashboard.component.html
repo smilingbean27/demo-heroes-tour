@@ -1,0 +1,7 @@
+<ul class="dashboard_list">
+    <li class="dashboard_item" *ngFor = "let topHero of topHeroes">
+        <a class="dashboard_link" routerLink="/detail/{{topHero.id}}" routerLinkActive="active">
+            {{topHero.name}}
+        </a>
+    </li>
+</ul>
