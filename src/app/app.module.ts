@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HeroesDataService } from './heroes-data.service';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     DashboardComponent,
     HeroesComponent,
     PageNotFoundComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,

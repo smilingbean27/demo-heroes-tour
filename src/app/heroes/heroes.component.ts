@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesDataService } from '../heroes-data.service';
 import { Hero } from './hero';
+import { Observable} from 'rxjs'
 
 @Component({
   selector: 'app-heroes',
@@ -32,5 +33,12 @@ export class HeroesComponent implements OnInit {
     .subscribe(hero => {
       this.heroes.push(hero);
     })
+  }
+
+  delete(hero: Hero):void{
+    console.log('Deleting hero button');
+    this.heroes = this.heroes.filter(myHero => myHero !== hero);
+    this.heroService.deleteHero(hero)
+      .subscribe(() => console.log(`Hero ${hero.name} removed.`));
   }
 }

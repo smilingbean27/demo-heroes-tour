@@ -50,13 +50,41 @@ export class HeroesDataService {
   }
 
   addHero(hero: Hero ): Observable<Hero>{
-    console.log(hero);
     return this.http.post<Hero>(this.heroesURL, hero, this.httpOptions)
     .pipe(
       tap( hero => console.log(`Added Hero id:${hero.id}`)),
-      catchError(this.handleError<any>('UpdateHero'))
+      catchError(this.handleError<any>('Not able to add Hero'))
     )
     
+  }
+
+  deleteHero(hero: Hero): Observable<Hero>{
+    const url = `${this.heroesURL}/${hero.id}`;
+    console.log(hero);
+    return this.http.delete<Hero>(this.heroesURL, this.httpOptions)
+    .pipe(
+      tap( hero => console.log(`Deleted Hero id:${hero.id}`)),
+      catchError(this.handleError<any>('Not able to delete Hero'))
+    )
+
+  }
+
+  searchHero(term: string): Observable<Hero[]>{
+    if (!term.trim()){
+      console.log('No seaching Term');
+      return of([]);
+    }
+    else{
+      return this.http.get<Hero[]>(`${this.heroesURL}/?name=${term}`)
+      .pipe(
+        tap(heroes => {
+          (heroes.length > 0) ?
+          console.log('Heroes found'): 
+          console.log('No heroes found');
+        }),
+        catchError(this.handleError<any>('Something bad happend while searching for heroes'))
+      ) 
+    }
   }
   
 }

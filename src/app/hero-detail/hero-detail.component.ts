@@ -3,6 +3,7 @@ import { Hero } from '../heroes/hero';
 import { HeroesDataService } from '../heroes-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location} from '@angular/common'
+import { Observable} from 'rxjs';
 
 @Component({
   selector: 'app-hero-detail',
@@ -36,5 +37,7 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.updateHero(this.hero)
       .subscribe(()=> this.goBack());
   }
+
+  
 
 }

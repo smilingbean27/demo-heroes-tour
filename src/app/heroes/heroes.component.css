@@ -4,9 +4,12 @@
 
 .hero_item{
     background-color: #555;
-    padding: .5rem 1rem;
+    padding: 0;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero_item:not(:last-child){
@@ -16,6 +19,13 @@
 .hero_link{
     text-decoration: none;
     color: #eee;
-    display: inline-block;
     width: 100%; 
+}
+.delete{
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    height: 100%;
+    padding: .2rem .5rem; 
+    align-self: stretch;
 }

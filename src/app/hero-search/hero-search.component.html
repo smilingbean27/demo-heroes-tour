@@ -1,0 +1,11 @@
+
+<label> 
+    Search Hero:
+    <input #searchTerm  (input) = "search(searchTerm.value)">
+</label>
+
+<ul>
+    <li *ngFor="let searchedHero of searchedHeroes">
+        {{searchedHero.name}}
+    </li>
+</ul>

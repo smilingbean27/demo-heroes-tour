@@ -3,6 +3,7 @@
         <a class="hero_link" routerLink="/detail/{{hero.id}}" routerLinkActive="active">
             {{hero.name}}
         </a>
+        <span class="delete" (click)="delete(hero)"> X </span>
     </li>
     <label> <input type="text" placeholder="Add new Hero" #newHero required></label>
     <label> <input type="number" placeholder="Mention rank" #newHeroRank required></label>
